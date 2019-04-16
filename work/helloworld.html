@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+<!--当引入vue.js,在全局环境会注册一个构造函数-->
+<!--mvvm mvp mvc  -->
+<!--前后端分离（mvp mvvm) 后端吐数据-->
+<!--//服务端渲染           后端吐页面-->
+<!--//性能比较：用户量较小的时候，服务端渲染性能比较高-->
+<!--//toC 面向用户        tob 面向企业-->
+  <div id="app">
+    {{msg}}              <!--插值表达式-->
+  </div>
+<script>
+  //声明式编程
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"hello world"
+    }
+  })
+</script>
+</body>
+</html>

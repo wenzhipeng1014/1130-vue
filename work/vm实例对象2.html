@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="dead"></div>
+  </div>
+</body>
+<script>
+  Vue.config.productionTip=false;
+  var vm = new Vue({
+    template:"<span>{{msg}}</span>",
+    data:{
+      msg:"hello world",
+    }
+  })
+  console.log(vm.mount)
+  vm.$mount("#dead")
+
+</script>
+</html>

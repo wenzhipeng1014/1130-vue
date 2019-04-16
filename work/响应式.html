@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{msg}}
+    {{name}}
+  </div>
+</body>
+<script>
+  //响应式单向数据流
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"hello world"
+    }
+  })
+  console.log(vm.msg);
+  setTimeout(()=>{
+    vm.msg=" hello vue";
+  },2000)
+  vm.name="老男人"
+  setTimeout(()=>{
+    vm.name="xxx"
+  },4000)
+</script>
+</html>

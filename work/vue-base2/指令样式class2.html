@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <script src="../js/vue.js"></script>
+  <style>
+    .hotpink{
+      color: hotpink;
+    }
+    .big{
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p :class="pClass">
+      和很多好好的好的好
+    </p>
+  </div>
+</body>
+<script>
+  Vue.config.productionTipTipip=false
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      pClass:[{hotpink:true},{big:false}]
+    }
+  })
+</script>
+</html>

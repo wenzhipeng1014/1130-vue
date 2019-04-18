@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p :style="pStyle">
+      hhkkwww
+    </p>
+  </div>
+</body>
+<script>
+  Vue.config.producyionTip=false
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      pStyle:[{color:'yellow'},{fontSize:'100px'},]
+    }
+  })
+</script>
+</html>

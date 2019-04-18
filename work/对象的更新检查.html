@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./js/vue.js"></script>
+</head>w
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(val,key,index) in arr[0]">
+        {{index}}---{{key}}---{{val}}
+      </li>
+    </ul>
+  </div>
+</body>
+<script>
+  Vue.config.productionTipTip=false
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      arr:[
+        {
+          name:'damu',
+          age:18,
+          wife:'18岁的冬雨'
+        },
+        {
+          name:'张小飞',
+          age:20,
+          wife:'刘志远'
+        },
+        {
+          name:'zhangtianyu',
+          age:19,
+          wife:'yanxingyu'
+        },
+      ]
+    },
+    methods:{
+      handleDel(index){
+        this.arr.splice(index,1)
+      },
+      handleUpdate(index){
+        this.arr.splice(index,1,{
+          name:'xxx',
+          age:0,
+          wife:'yyy'
+        })
+      }
+    }
+  })
+</script>
+</html>
